@@ -8,18 +8,13 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size:  2rem;
   }
   
   :root {
     font-size:  ${({ theme }) => `${theme.font.size}px`};
-    font-family: ${({ theme }) => theme.font.family};
-    color: ${({ theme }) => theme.colors.text};
-    background-color: ${({ theme }) => theme.colors.background};
-  }
-
-  html,
-  body,
-  #root {
-    height: 100%;
+    font-family: ${({ theme }) => theme.font.family.default};
+    color: ${({ theme }) => theme.colors.foreground.base};
+    background-color: ${({ theme }) => theme.colors.background.base};
   }
 `
