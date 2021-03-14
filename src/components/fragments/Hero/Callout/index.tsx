@@ -8,15 +8,21 @@ interface ICalloutProps {
   callout: string
 }
 
-export const Callout = ({ title, callout, children }) => {
+export const Callout: React.FC<ICalloutProps> = ({
+  title,
+  callout,
+  children
+}) => {
   return (
     <CalloutStyled>
       <div className="callout-logo">
         <Logo />
       </div>
-      <h1>{title}</h1>
-      <h2>{callout}</h2>
-      <div className="callout-actions">{children}</div>
+      <div className="callout-content">
+        <h1>{title}</h1>
+        <h2>{callout}</h2>
+        <div className="callout-actions">{children}</div>
+      </div>
     </CalloutStyled>
   )
 }

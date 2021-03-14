@@ -1,7 +1,7 @@
 import React from 'react'
 
-import heroBackground from '../../../assets/hero-bg.png'
 import { HeroStyled } from './styles'
+import heroBackground from '../../../assets/hero-bg.png'
 
 export const Hero: React.FC = ({ children }) => {
   return (

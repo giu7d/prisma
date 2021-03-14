@@ -25,7 +25,7 @@ const Base = styled.button`
   }
 
   &:active {
-    opacity: 0.5;
+    opacity: 0.75;
     border-style: none;
   }
 
@@ -40,8 +40,6 @@ export const Custom = styled(Base)<ICustomComponent>`
   border-radius: ${getRoundness};
 `
 
-//
-
 export const Text = styled(Custom)`
   padding: 1.5rem 2rem;
   width: 100%;
@@ -49,8 +47,8 @@ export const Text = styled(Custom)`
 
 export const Icon = styled(Custom)<ICustomBlurComponent>`
   display: flex;
-  width: 64px;
-  height: 64px;
+  min-width: 64px;
+  min-height: 64px;
   justify-content: center;
   align-items: center;
   // Blur
