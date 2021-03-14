@@ -7,6 +7,8 @@ import { Hero } from '../components/fragments/Hero'
 import { Button } from '../components/fragments/Button'
 import { Callout } from '../components/fragments/Hero/Callout'
 import { HeroFloatButton } from '../components/fragments/Hero/HeroFloatButton'
+import { AppBar } from '../components/fragments/AppBar'
+import { AppBarNavigationVertical } from '../components/fragments/AppBar/Navigation/Vertical'
 
 const Home: React.FC = () => {
   const theme = useTheme()
@@ -32,7 +34,25 @@ const Home: React.FC = () => {
           </HeroFloatButton>
         </Callout>
       </Hero>
-      <div>Hello World</div>
+
+      <div style={{ width: '100%', height: '100vh' }}>
+        <AppBar>
+          <AppBarNavigationVertical
+            previous={{
+              title: 'Inicio',
+              onClick: () => {}
+            }}
+            current={{
+              title: 'quem somos',
+              onClick: () => {}
+            }}
+            next={{
+              title: 'O que fazemos',
+              onClick: () => {}
+            }}
+          />
+        </AppBar>
+      </div>
     </div>
   )
 }
