@@ -1,4 +1,8 @@
-import styled from 'styled-components'
+import styled, { DefaultTheme } from 'styled-components'
+
+interface ITypographyParagraph {
+  justify?: boolean
+}
 
 export const Typography = {
   Callout: styled.small`
@@ -17,8 +21,9 @@ export const Typography = {
     font-weight: 600;
     font-size: 1.25rem;
   `,
-  Paragraph: styled.p`
+  Paragraph: styled.p<ITypographyParagraph>`
     font-family: ${({ theme }) => theme.font.family.highlight};
     font-size: 1.5rem;
+    text-align: ${({ justify = false }) => (justify ? 'justify' : 'left')};
   `
 }

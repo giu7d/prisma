@@ -17,4 +17,9 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.foreground.base};
     background-color: ${({ theme }) => theme.colors.background.base};
   }
+
+  body {
+    scroll-snap-type: y proximity;
+  }
+
 `

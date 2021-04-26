@@ -6,6 +6,7 @@ export const HeroStyled = styled.main`
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  scroll-snap-align: start;
 
   .hero-background {
     position: absolute;

@@ -4,6 +4,7 @@ export const AppBarNavigationVerticalStyled = styled.nav`
   display: flex;
   flex: 1 1;
   flex-direction: column;
+  align-items: flex-end;
   gap: 2px;
 
   a {
@@ -18,7 +19,7 @@ export const AppBarNavigationVerticalStyled = styled.nav`
   }
 
   a.nav-current {
-    font-size: 2rem;
+    font-size: 1.75rem;
     opacity: 1;
   }
 `
