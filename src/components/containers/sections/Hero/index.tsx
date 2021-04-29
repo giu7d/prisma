@@ -1,13 +1,11 @@
 import React, { FormEvent } from 'react'
 
 import Logo from '../../../../assets/logo.svg'
-import {
-  HeroCallout,
-  HeroLogo,
-  HeroWrapper,
-  InputArea,
-  SubmitButton
-} from './styles'
+import { Button } from '../../../fragments/Button'
+import { InputAreaWithButton } from '../../../fragments/Form/InputAreaWithButton'
+import { HeroCalloutForm } from '../../../fragments/Hero/CalloutForm'
+import { HeroLogo } from '../../../fragments/Hero/Logo'
+import { HeroWrapper } from './styles'
 
 export const Hero = () => {
   const handleSubmit = (e: FormEvent) => {
@@ -19,15 +17,18 @@ export const Hero = () => {
       <HeroLogo>
         <Logo />
       </HeroLogo>
-      <HeroCallout onSubmit={handleSubmit}>
+      <HeroCalloutForm onSubmit={handleSubmit}>
         <h3>
           Lorem Ipsum <br /> ed ut perspiciatis unde omnis iste natus error.
         </h3>
-        <InputArea>
-          <input name="email" type="email" placeholder="Qual é o seu email?" />
-          <SubmitButton type="submit">Fale comigo!</SubmitButton>
-        </InputArea>
-      </HeroCallout>
+        <InputAreaWithButton
+          name="email"
+          type="email"
+          placeholder="Qual é o seu email?"
+        >
+          <Button.Submit type="submit">Fale comigo!</Button.Submit>
+        </InputAreaWithButton>
+      </HeroCalloutForm>
     </HeroWrapper>
   )
 }

@@ -34,6 +34,23 @@ const Base = styled.button`
   }
 `
 
+export const Submit = styled(Base)`
+  padding: 1rem;
+  height: 54px;
+  border-radius: 1rem;
+  font-weight: 500;
+
+  background: ${({ theme }) => theme.colors.background.light};
+  color: ${({ theme }) => theme.colors.foreground.base};
+
+  &:hover {
+    background: ${({ theme }) =>
+      `linear-gradient(115deg, ${theme.colors.warn.base} 2.03%, ${theme.colors.primary.base} 97.6%);`};
+    color: ${({ theme }) => theme.colors.foreground.base};
+    opacity: 1;
+  }
+`
+
 export const Custom = styled(Base)<ICustomComponent>`
   background: ${getBackgroundColor};
   color: ${getColor};
@@ -60,5 +77,6 @@ export const Icon = styled(Custom)<ICustomBlurComponent>`
 export const Button = {
   Base,
   Text,
-  Icon
+  Icon,
+  Submit
 }
