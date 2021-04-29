@@ -17,7 +17,7 @@ const Base = styled.button`
   transition: 200ms opacity ease-out;
 
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1.5rem;
 
   &::-moz-focus-inner {
