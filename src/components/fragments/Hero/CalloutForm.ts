@@ -22,3 +22,21 @@ export const HeroCalloutForm = styled.form`
     margin: auto;
   }
 `
+
+export const HeroCalloutFormSubmitted = styled.div`
+  display: flex;
+  flex: 1;
+
+  padding: 1rem;
+  min-height: 54px;
+  border-radius: 1rem;
+  font-weight: 500;
+  font-weight: 500;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+
+  background: ${({ theme }) =>
+    `linear-gradient(115deg, ${theme.colors.warn.base} 2.03%, ${theme.colors.primary.base} 97.6%);`};
+  color: ${({ theme }) => theme.colors.foreground.base};
+`
